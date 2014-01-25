@@ -1,3 +1,3 @@
-Meteor.router.add({
+Meteor.Router.add({
   '/': 'postsList'
 });
