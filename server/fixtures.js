@@ -16,4 +16,6 @@ if (Posts.find().count() === 0) {
     author: 'Darth Vader',
     url: 'http://starwars.com'
   });
+
+  console.log('Inserted ' + Posts.find().count() + ' posts');
 }
