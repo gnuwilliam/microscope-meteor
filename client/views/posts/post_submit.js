@@ -7,5 +7,8 @@ Template.postSubmit.events({
       title: $(event.target).find('[name=title]').val(),
       message: $(event.target).find('[name=message]').val()
     }
+
+    post._id = Posts.insert(post);
+    Meteor.router.to('postPage', post);
   }
 });
