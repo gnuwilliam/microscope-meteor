@@ -4,7 +4,8 @@
     "basePackages": {
       "router": {},
       "accounts-ui-bootstrap-dropdown": {},
-      "spin": {}
+      "spin": {},
+      "meteor-simple-errors": {}
     },
     "packages": {
       "router": {
@@ -21,6 +22,11 @@
         "git": "https://github.com/SachaG/meteor-spin.git",
         "tag": "v0.2.2",
         "commit": "3f655f0016228e4195acc784c45d3e3a247dc39f"
+      },
+      "meteor-simple-errors": {
+        "git": "https://github.com/gnuwilliam/meteor-simple-errors.git",
+        "tag": "v0.1.1",
+        "commit": "da94519da68446b622c1659c4b9e9b936ebc20c0"
       },
       "page-js-ie-support": {
         "git": "https://github.com/tmeasday/meteor-page-js-ie-support.git",
