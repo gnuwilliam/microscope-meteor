@@ -13,7 +13,7 @@ Template.postEdit.events({
     var postProperties = {
       url: $(event.target).find('[name=url]').val(),
       title: $(event.target).find('[name=title]').val()
-    }
+    };
 
     Posts.update(currentPostId, { $set: postProperties }, function (error) {
       if (error) {
