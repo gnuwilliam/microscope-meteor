@@ -9,6 +9,11 @@ Meteor.methods({
     if (!user) {
       throw new Meteor.error(401, 'You need to login to post new stories');
     }
+
+    // ensure the post has a title
+    if (!postAttributes.title) {
+      throw new Meteor.error(422, 'Please fill a headline');
+    }
   }
 });
 
