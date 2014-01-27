@@ -3,3 +3,7 @@ Template.postEdit.helpers({
     return Posts.findOne(Session.get('currentPostId'));
   }
 });
+
+Template.postEdit.events({
+
+});
