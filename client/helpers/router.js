@@ -23,6 +23,11 @@ Meteor.Router.filters({
     } else {
       return 'accessDenied';
     }
+  },
+
+  'clearErrors': function (page) {
+    clearErrors();
+    return page;
   }
 });
 
