@@ -9,4 +9,4 @@ Meteor.errors = {
   clear: function () {
     Meteor.errors.remove({ seen: true });
   }
-}
+};
