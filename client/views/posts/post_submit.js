@@ -10,7 +10,8 @@ Template.postSubmit.events({
 
     Meteor.call('post', post, function (error, id) {
       if (error) {
-        return alert(error.reason);
+        // display error
+        throwError(error.reason);
       }
 
       Meteor.Router.to('postPage', id);
