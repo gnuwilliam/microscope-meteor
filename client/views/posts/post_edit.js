@@ -1,0 +1,3 @@
+Template.postEdit.helpers({
+
+});
