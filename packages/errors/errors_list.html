@@ -3,3 +3,10 @@
     {{> meteorError}}
   {{/each}}
 </template>
+
+<template name="meteorError">
+  <div class="alert alert-error">
+    <button class="close" type="button" data-dismiss="alert">&times;</button>
+    {{message}}
+  </div>
+</template>
