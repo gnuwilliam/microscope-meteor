@@ -28,6 +28,8 @@ Meteor.methods({
       author: user.username,
       submitted: new Date().getTime()
     });
+
+    var postId = Posts.insert(post);
   }
 });
 
