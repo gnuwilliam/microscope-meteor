@@ -7,4 +7,4 @@ throwError = function (message) {
 
 clearErrors = function () {
   Errors.remove({ seen: true });
-}
+};
