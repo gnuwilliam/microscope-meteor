@@ -27,5 +27,12 @@ Template.postEdit.events({
 
   'click .delete': function (event) {
     event.preventDefault();
+
+    if (confirm('Delete this post?')) {
+      var currentPostId = Session.get('currentPostId');
+      Posts.remove(currentPostId);
+
+      Meteor.Router.to('postsList'); 
+    }
   }
 });
