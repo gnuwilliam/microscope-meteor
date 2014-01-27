@@ -13,7 +13,7 @@ Template.postSubmit.events({
         return alert(error.reason);
       }
 
-      Meteor.Router.to('postPage', post);
+      Meteor.Router.to('postPage', id);
     });
   }
 });
