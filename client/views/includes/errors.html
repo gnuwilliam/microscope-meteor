@@ -1,2 +1,7 @@
 <template name="errors">
+  <div class="errors row-fluid">
+    {{#each errors}}
+      {{> error}}
+    {{/each}}
+  </div>
 </template>
