@@ -14,6 +14,13 @@ Meteor.methods({
     if (!postAttributes.title) {
       throw new Meteor.error(422, 'Please fill a headline');
     }
+
+    // check that there are no previous posts with the same link
+    if (postAttributes.url && postWithSameLink) {
+      throw new Meteor.error(302, 
+        'This link has already been posted', 
+        postWithSameLink._id);
+    }
   }
 });
 
