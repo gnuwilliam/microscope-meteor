@@ -19,17 +19,17 @@ Meteor.methods({
 
     // ensure the user is logged in
     if (!user) {
-      throw new Meteor.error(401, 'You need to login to post new stories');
+      throw new Meteor.Error(401, 'You need to login to post new stories');
     }
 
     // ensure the post has a title
     if (!postAttributes.title) {
-      throw new Meteor.error(422, 'Please fill a headline');
+      throw new Meteor.Error(422, 'Please fill a headline');
     }
 
     // check that there are no previous posts with the same link
     if (postAttributes.url && postWithSameLink) {
-      throw new Meteor.error(302, 
+      throw new Meteor.Error(302, 
         'This link has already been posted', 
         postWithSameLink._id);
     }
