@@ -21,6 +21,13 @@ Meteor.methods({
         'This link has already been posted', 
         postWithSameLink._id);
     }
+
+    // pick out the whitelisted keys
+    var post = _.extend(_.pick(postAttributes, 'url', 'title', 'message'), {
+      userId: user._id,
+      author: user.username,
+      submitted: new Date().getTime()
+    });
   }
 });
 
