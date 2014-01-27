@@ -23,5 +23,9 @@ Template.postEdit.events({
         Meteor.Router.to('postPage', currentPostId);
       }
     });
+  },
+
+  'click .delete': function (event) {
+    event.preventDefault();
   }
 });
