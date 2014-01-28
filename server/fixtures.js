@@ -10,6 +10,7 @@ if (Posts.find().count() === 0) {
   var sachaId = Meteor.users.insert({
     profile: { name: 'Sacha Greif' }
   });
+  var sacha = Meteor.users.findOne(sachaId);
 
   Posts.insert({
     title: 'Introducing Telescope',
