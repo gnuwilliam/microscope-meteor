@@ -23,5 +23,7 @@ Meteor.methods({
       author: user.username,
       submitted: new Date().getTime()
     });
+
+    return Comments.insert(comment);
   }
 });
