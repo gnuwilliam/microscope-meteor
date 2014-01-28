@@ -28,6 +28,12 @@ if (Posts.find().count() === 0) {
     body: 'Interesting project Sacha, can I get involved?'
   });
 
+  Comments.insert({
+    postId: telescopeId,
+    userId: sacha._id,
+    author: sacha.profile.name, submitted: now - 3 * 3600 * 1000, body: 'You sure can Tom!'
+  });
+
   Posts.insert({
     title: 'Testando essa app',
     author: 'William Oliveira',
