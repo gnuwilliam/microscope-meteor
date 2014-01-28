@@ -9,5 +9,9 @@ Meteor.methods({
     if (!user) {
       throw new Meteor.Error(401, "You need to login to make comments");
     }
+
+    if (!commentAttributes.body) {
+      throw new Meteor.Error(422, 'Please write some content');
+    }
   }
 });
