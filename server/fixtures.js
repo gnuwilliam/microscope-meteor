@@ -14,6 +14,7 @@ if (Posts.find().count() === 0) {
 
   Posts.insert({
     title: 'Introducing Telescope',
+    userId: sacha._id,
     author: 'Sacha Greif',
     url: 'http://sachagreif.com/introducing-telescope'
   });
