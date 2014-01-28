@@ -35,9 +35,10 @@ if (Posts.find().count() === 0) {
   });
 
   Posts.insert({
-    title: 'Testando essa app',
-    author: 'William Oliveira',
-    url: 'http://github.com/gnuwilliam'
+    title: 'Meteor',
+    userId: tom._id,
+    author: tom.profile.name,
+    url: 'http://meteor.com', submitted: now - 10 * 3600 * 1000
   });
 
   Posts.insert({
