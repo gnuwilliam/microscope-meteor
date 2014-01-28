@@ -17,5 +17,11 @@ Meteor.methods({
     if (!commentAttributes.postId) {
       throw new Meteor.Error(422, 'You must comment on a post');
     }
+
+    comment = _.extend(_.pick(commentAttributes, 'postId', 'body'), { 
+      userId: user._id,
+      author: user.username,
+      submitted: new Date().getTime()
+    });
   }
 });
