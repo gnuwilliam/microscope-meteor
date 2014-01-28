@@ -40,11 +40,12 @@ if (Posts.find().count() === 0) {
     author: tom.profile.name,
     url: 'http://meteor.com', submitted: now - 10 * 3600 * 1000
   });
-
+  
   Posts.insert({
-    title: 'Luke, Im your father!',
-    author: 'Darth Vader',
-    url: 'http://starwars.com'
+    title: 'The Meteor Book',
+    userId: tom._id,
+    author: tom.profile.name,
+    url: 'http://themeteorbook.com', submitted: now - 12 * 3600 * 1000
   });
 
   console.log('Inserted ' + Posts.find().count() + ' posts');
