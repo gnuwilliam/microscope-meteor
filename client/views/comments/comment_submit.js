@@ -1,5 +1,5 @@
 Template.commentSubmit.events({
-  'submit form': function (event, template) }
+  'submit form': function (event, template) {
     event.preventDefault();
 
     var comment = {
