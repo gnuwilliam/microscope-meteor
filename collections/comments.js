@@ -13,5 +13,9 @@ Meteor.methods({
     if (!commentAttributes.body) {
       throw new Meteor.Error(422, 'Please write some content');
     }
+
+    if (!commentAttributes.postId) {
+      throw new Meteor.Error(422, 'You must comment on a post');
+    }
   }
 });
