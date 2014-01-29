@@ -19,3 +19,11 @@
     {{/if}}
   </ul>
 </template>
+
+<template name="notification">
+  <li>
+    <a href="{{postPagePath postId}}">
+      <strong>{{commenterName}}</strong> commented on your post
+    </a>
+  </li>
+</template>
