@@ -7,6 +7,9 @@
         {{#if currentUser }} 
           <li><a href="{{ postSubmitPath }}">Submit Post</a></li>
         {{/if}}
+        <li class="dropdown">
+          {{> notifications }}
+        </li>
       </ul>
 
       <ul class="nav pull-right">
