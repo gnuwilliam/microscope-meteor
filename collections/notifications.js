@@ -14,4 +14,4 @@ createCommentNotification = function (comment) {
     commenterName: comment.author,
     read: false
   });
-}
+};
